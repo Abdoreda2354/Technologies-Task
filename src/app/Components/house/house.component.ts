@@ -14,7 +14,7 @@ import { SubmissionComponent } from '../submission/submission.component';
 })
 export class HouseComponent {
   dataFromChildren:object[]=[]
-   activeComponent:string="selection"
+   activeComponent:string="prestep"
   Routing(data: string) {
     this.activeComponent=data    
   }
