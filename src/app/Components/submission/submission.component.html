@@ -1,0 +1,106 @@
+<section class="firsPart" *ngIf="firstSection">
+    <div class="navbar p-3">
+        <div class="back d-flex justify-content-center align-items-center " (click)="backsec1()"  (mouseenter)="disblayBox()" ><img class="ms-2 " src="../../../assets/arrow-right.png" alt="arrow"><p class="mb-0">العودة</p></div>
+        <div class="exit ms-3" (mouseenter)="redexit()" (mouseleave)="normalexit()" >
+            <img #normalExit class="normalexit " src="../../../assets/exit.png" alt="">
+            <img #redExit class="redexit d-none" src="../../../assets/redexit.png" alt="">
+            
+        </div>
+</div>
+    <div class="head d-flex flex-column align-items-center mt-5">
+        <h2>جاري إرسال رسالتك الأسكانية</h2>
+        <p>الرجاء الأنتظار بعض الدقائق فقط</p>
+    </div>
+
+    <div class="sendIcon mt-5">
+        <div class="icon d-flex justify-content-between align-items-center">
+            <div class="img ">
+                <img class=" w-100" src="https://s3-alpha-sig.figma.com/img/a5d5/26c6/0c9abd2b33848aff4f0300d95ff98858?Expires=1725840000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LAlDWkn2ftrY7ECLRNGMXc2B0Wq~OYHMno3iluJPDRJbEWeMZajIGi7dtuwKGTsn23xDChz-C11ik6mZz4sTuLBNJ1mja~vZJHs6JXIzWxb7QYhxs3fuQ6mn3nklwNvHKqLDlQ2uzZ-Ln4aN-~4eQCmGh04yZM3vfZa9smfvPjPEAC0d~GvAjenjPK4V3NQZtqX2wJNlbxhg-~GR6iiZ21Dvz8q8rZJBFXO7l4X27B1yYrOocm6KQa75WRaTVaS4-~3ktplAVF9UQSdpmfsFyqxCS4JQRN5v2gX5amX9-gI8LpR5EAtynOg-0CyUDMusi-wDjERplm7x4OdlMAotPg__" alt="">
+
+            </div>
+                
+        </div>
+
+    </div>
+
+    <div class="container prog">
+      <div class="valueofoprog mb-2 d-flex justify-content-between">
+       <p class="mb-0 stillSend">جاري الأرسال</p>
+       <p class="mb-0"> 100\{{progressValue}}</p>
+      </div>
+        <div class="progress">
+            
+          <div class="progress-bar" 
+               role="progressbar" 
+               [style.width.%]="progressValue" 
+               [attr.aria-valuenow]="progressValue" 
+               aria-valuemin="0" 
+               aria-valuemax="100">
+          </div>
+        </div>
+      </div>
+      
+      <div #backhover class="backhover d-none " (mouseleave)="removeBox()">
+        <div class="row">
+            <div class="col-6 ">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="secondPart" *ngIf="secondSection">
+    <div class="navbar p-3">
+        <div class="back d-flex justify-content-center align-items-center " (click)="backsec2()"  (mouseenter)="disblayBox()" ><img class="ms-2 " src="../../../assets/arrow-right.png" alt="arrow"><p class="mb-0">العودة</p></div>
+        <div class="exit ms-3" (mouseenter)="redexit()" (mouseleave)="normalexit()" >
+            <img #normalExit class="normalexit " src="../../../assets/exit.png" alt="">
+            <img #redExit class="redexit d-none" src="../../../assets/redexit.png" alt="">
+            
+        </div>
+    </div>
+    <div class="head d-flex flex-column align-items-center mt-5">
+        <h2>تم إرسال رسالتك بنجاح</h2>
+        <p>الرجاء الأنتظار بعض الدقائق فقط </p>
+    </div>
+
+    <div class="sendIcon2 mt-5">
+        <div class="icon d-flex justify-content-between align-items-center">
+            <div class="img w-100">
+                <img class=" w-100" src="../../../assets/Animation-true.gif" alt="">
+
+
+            </div>
+                
+        </div>
+    </div>
+    <div class="finalexit" (click)="navgiate()" >
+        <p class="text-center"  >خروج</p>
+    </div>
+
+
+      
+    <div #backhover class="backhover d-none " (mouseleave)="removeBox()">
+        <div class="row">
+            <div class="col-6 ">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>

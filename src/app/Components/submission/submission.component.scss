@@ -1,0 +1,111 @@
+*{
+    font-family: 'Neo Sans Arabic', sans-serif;
+}
+.head h2{
+font-size: 1.8rem;
+    color: #323338;
+    margin-bottom: 15px;
+}
+
+.head p{
+font-size: 18px;
+line-height: 19px;
+color: #83899F;
+}
+.firsPart .sendIcon .icon{
+    width: 270px;
+    height: 270px;
+
+}
+.firsPart .sendIcon .icon img{
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    border: 8px solid #3e98ff6f;
+
+}
+.sendIcon{
+    display: flex;
+    justify-content: center;
+
+}
+.progress {
+    height: 20px;
+    background-color: #3e98ff6f;
+    border-radius: 30px;
+  }
+  
+  .progress-bar {
+    background-color: #3E97FF; 
+    font-weight: bold;
+    line-height: 30px; 
+    border-radius: 30px;
+
+  }
+  .prog{
+    margin-top: 124px;
+    width: 750px;
+  }
+  .stillSend{
+font-size: 17px;
+color: #000000;
+  }
+
+  .secondPart .sendIcon2 .icon{
+    width: 300px;
+    height: 300px;
+
+}
+.secondPart .sendIcon2 .icon img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.sendIcon2{
+    display: flex;
+    
+    justify-content: center;
+}
+
+.finalexit{
+    margin-top: 130px;
+}
+.exit p{
+font-size: 16px;
+line-height: 19px;
+letter-spacing: -0.03em;
+color: #3E97FF;
+cursor: pointer;
+
+}
+
+.back{
+  cursor: pointer;
+}
+.backhover{
+  width: 380px;
+  padding: 30px;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: 1px solid #0000002c;
+  border-radius: 20px;
+  transition: 0.5s;
+  z-index: 9999;
+
+  background-color: #a5a7ab79;
+
+}
+.exit{
+  transform: scale(1.3);
+}
+@media (max-width: 700.98px) {
+    .prog{
+        width: 500px;
+      }
+    }
+@media (max-width: 568.98px) {
+    .prog{
+        width: 380px;
+      }
+    }

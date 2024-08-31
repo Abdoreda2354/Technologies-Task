@@ -1,0 +1,254 @@
+* {
+ list-style: none;
+ font-family: 'Neo Sans Arabic', sans-serif;
+}
+.head p{
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 17px;
+text-align: right;
+color: #83899F;
+}
+.head{
+    margin-bottom: 50px;
+
+}
+section{
+    overflow-x: hidden;
+}
+.row{
+    min-height: 100vh;
+}
+.row h2{
+width: 420px;
+height: 100px;
+font-weight: 500;
+font-size: 30px;
+line-height: 45px;
+text-align: right;
+color: #183B56;
+}
+
+.section1{
+    background: url("../../../assets/Rectangle.png");
+    background-size: cover;
+    opacity: 0.9;
+
+}
+.internal{
+    margin-right: 20px;
+}
+.p2{
+    width: 400px;
+    height: 60px;
+font-size: 18px;
+line-height: 25px;
+color: #83899F;
+}
+ul{
+    padding: 0!important;
+    margin-top: 58px;
+}
+ul li{
+    display: flex ;
+    align-items: center;
+    margin-top: 30px;
+}
+ul li p{
+    margin-bottom: 0 !important;
+    margin-right: 15px;
+width: 300px;
+height: 17px;
+font-weight: 400;
+font-size: 17px;
+line-height: 17px;
+color: #464E5F;
+}
+ul li .img{
+
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+color: #3E97FF;
+    background: linear-gradient(270deg, rgba(86, 164, 255, 0.2) 0%, rgba(9, 119, 248, 0.2) 100%);
+
+}
+
+.internal ,.internal2{
+    margin-top: 50px;
+    margin-right: 50px;
+}
+.internal2 p{
+width: 433px;
+height: 20px;
+font-size: 17px;
+line-height: 20px;
+color: #83899F;
+margin-top: 15px !important;
+}
+
+.internal2 h3{
+width: 433px;
+height: 24px;
+font-weight: 500;
+font-size: 24px;
+line-height: 24px;
+color: #183B56;
+}
+
+.internal2 .head{
+    margin-bottom: 40px;
+
+}
+
+.box h5{
+width: 384.75px;
+height: 19px;
+font-weight: 400;
+font-size: 19px;
+line-height: 19px;
+color: #2E2E2E;
+margin-top: 20px;
+}
+.box p{
+    width:500.64px;
+    height: 17px;
+    font-size: 16px;
+    line-height: 17px;
+    color: #8E8E93;
+    }
+    .box{
+        width: 500px;
+        padding: 20px;
+        border-radius: 10px;
+        
+    }
+.primary,.option1,.option2{
+    top: 12px;
+    left: 12px;
+}
+.box .message ,.box .Ai{
+    width: 8%;
+}
+.box2 h3{
+width: 433px;
+height: 24px;
+font-weight: 500;
+font-size: 21px;
+line-height: 24px;
+color: #183B56;
+}
+.box2 p{
+width: 433px;
+height: 20px;
+line-height: 20px;
+color: #83899F;
+}
+.box2 input{
+    width: 77%;
+    background-color: #e5e0e0;
+    border: 1px solid #00000023;
+}
+.box2 input:focus{
+    box-shadow: none!important;
+}
+.box2 input::placeholder{
+color: #989797;
+}
+.button button{
+    color:#ffffff;
+    width: 220px;
+    margin-left: 10px;
+    background-color: #3E97FF;
+    box-shadow: 0px -2px 21.1px 0px #4FA0FF66;
+}
+.button{
+    margin-top: 50px;
+    display: flex;
+    justify-content: end;
+}
+.selected{
+    border: solid 2px #4F9FFD;
+}
+.hidden{
+    visibility: hidden;
+}
+
+.button button:hover{
+    background-color: #2871c4;
+
+}
+
+@media (max-width: 1160.98px) {
+    .box{
+        width: 400px;
+    }
+    .box p{
+        width: 350px;
+        }
+    }
+@media (max-width: 1026.98px) {
+    .box{
+        width: 350px;
+    }
+    .box p{
+        width: 300px;
+        }
+    }
+@media (max-width: 900.98px) {
+    .head p{
+        font-size: 16px;
+        }
+        
+        .row h2{
+            width: 354px;
+            font-size: 24px;
+            }
+            .p2{   
+                width: 300px;             
+            font-size: 16px;
+            line-height: 25px;
+            }
+            ul li p{
+                width: 250px;
+            font-size: 14px;
+            }
+            .internal2 p{
+                font-size: 16px;
+                }
+            .internal2 h3{
+                font-size: 20px;
+                    }
+                
+            .box h5{
+                font-size: 16px;
+                }
+
+            .box p{
+                font-size: 14px;
+            }
+            .box2 h3{
+                font-size: 20px;
+                }
+                .box2 p{
+                    font-size: 16px;
+                }
+
+
+    }
+    @media (max-width: 862.98px) {
+        .box{
+            width: 300px;
+        }
+        .box p{
+            width: 250px;
+            }
+        
+    }
+
+    
+

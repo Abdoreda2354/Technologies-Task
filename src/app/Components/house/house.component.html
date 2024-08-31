@@ -1,0 +1,27 @@
+@if (activeComponent== "prestep") {
+
+
+        <app-pre-step (dataEmitter)="Routing($event)" (selectCampaignBuildingEmitter)="dataFromPrestep($event)" ></app-pre-step>
+    
+    
+}
+@if (activeComponent== "selection") {
+
+       <app-selection (dataEmitter)="Routing($event)"  (selectedplaceAndHouseEmitter)="dataFromSelection($event)"></app-selection>
+    
+    
+}
+@if (activeComponent== "prop") {
+
+        <app-prob (dataEmitter)="Routing($event)"  (propEmitter)="dataFromProp($event)"></app-prob>
+    
+    
+}
+@if (activeComponent== "submtion") {
+
+        <app-submission (dataEmitter)="Routing($event)"  (DoneEmitter)="displayData($event)"></app-submission>
+    
+    
+}
+
+    

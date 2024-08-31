@@ -1,0 +1,189 @@
+<section class="selectplace" *ngIf="placeTrue">
+    <div class="navbar p-3">
+        <div class="back d-flex justify-content-center align-items-center "  (mouseenter)="disblayBox()" (click)="backsec1()"><img class="ms-2 " src="../../../assets/arrow-right.png" alt="arrow"><p class="mb-0">العودة</p></div>
+        <div class="exit ms-3" (mouseenter)="redexit()" (mouseleave)="normalexit()" >
+            <img #normalExit class="normalexit " src="../../../assets/exit.png" alt="">
+            <img #redExit class="redexit d-none" src="../../../assets/redexit.png" alt="">
+            
+        </div>
+    </div>
+    <div class="head d-flex flex-column align-items-center  ">
+        <div class="data p-4 position-relative ">
+            <h3 class=" text-center">أختر المكان المفضل لسكنك</h3>
+            <p >قم بأختيار مصدر شقك الأسكانية كل تستكمل باقي الخطوات</p>
+            <img src="../../../assets/Vector.png" alt="vector" class="position-absolute vectortop">
+            <img src="../../../assets/Vector.png" alt="vector" class="position-absolute vectorbottom">
+        </div>
+            <div class="row container p-4 ">
+                <div class="col-12 col-md-4 section p-4  d-flex justify-content-center ">
+                    <label class="section-content  d-flex flex-column justify-content-center align-items-center " [ngClass]="{'selected': selectedplace == 'القاهره'}">
+                        <div class="img ">
+                            <img src="../../../assets/house.png" alt="" class="w-100">
+        
+                        </div>
+                        <input type="radio"  [(ngModel)]="selectedplace"  name="place" id="option3" class="d-none" value="القاهره">
+    
+                        <p>القاهرة</p>
+                        <img src="../../../assets/Primary.png" alt="primary" class="position-absolute primary d-none" [ngClass]="{'d-none': selectedplace  !== 'القاهره'}">
+    
+                    </label>
+    
+                </div>
+
+                <div class="col-12 col-md-4 section p-4  d-flex justify-content-center ">
+                    <label class="section-content  d-flex flex-column justify-content-center align-items-center " [ngClass]="{'selected': selectedplace == 'الساحل الشمالي '}">
+                        <div class="img ">
+                            <img src="../../../assets/الساحل.png" alt="الساحل" class="w-100">
+        
+                        </div>
+                        <input type="radio"  [(ngModel)]="selectedplace"  name="place" id="option2" class="d-none" value="الساحل الشمالي ">
+    
+                        <p>الساحل الشمالي</p>
+                        <img src="../../../assets/Primary.png" alt="primary" class="position-absolute primary d-none" [ngClass]="{'d-none': selectedplace  !== 'الساحل الشمالي '}">
+    
+                    </label>
+    
+                </div>
+                <div class="col-12 col-md-4 section p-4  d-flex justify-content-center ">
+                    <label class="section-content  d-flex flex-column justify-content-center align-items-center " [ngClass]="{'selected': selectedplace =='دهب'}">
+                        <div class="img ">
+                            <img src="../../../assets/Dahab.png" alt="" class="w-100">
+                        </div>
+                        <input type="radio"  [(ngModel)]="selectedplace" name="place" id="option1" class="d-none" value="دهب">
+    
+                        <p>دهب</p>
+                        <img src="../../../assets/Primary.png" alt="primary" class="position-absolute primary" [ngClass]="{'d-none': selectedplace  !== 'دهب'}">
+                    </label>
+    
+                </div>
+
+    
+            </div> 
+
+            <div class="button mt-5 mb-5 " (click)="selectplace()">
+
+                <button class="btn btn-primary" [disabled]="selectedplace==''" > <img src="../../../assets/circle-chevron-right (2).png" alt=""> أبدأ الأن</button>
+            </div>
+            <div class="footer d-flex flex-column align-items-center justify-content-center">
+                <p>نحن هنا لمساعدتك في أختيار منزلك بسهولة وعناية</p>
+                <p>قم بالضغط على زر "بدء" للبدء في العملية، واتبع التوجيهات لإدخال معلومات الحملة</p>
+            </div>
+           
+
+
+    </div>
+
+    <div class="line">
+
+    </div>
+
+    <div #backhover class="backhover d-none " (mouseleave)="removeBox()">
+        <div class="row">
+            <div class="col-6 ">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="selecthouse" *ngIf="hoserTrue">
+    <div class="navbar p-3">
+        <div class="back d-flex justify-content-center align-items-center " (click)="backsec2()"  (mouseenter)="disblayBox()" ><img class="ms-2 " src="../../../assets/arrow-right.png" alt="arrow"><p class="mb-0">العودة</p></div>
+        <div class="exit ms-3" (mouseenter)="redexit()" (mouseleave)="normalexit()" >
+            <img #normalExit class="normalexit " src="../../../assets/exit.png" alt="">
+            <img #redExit class="redexit d-none" src="../../../assets/redexit.png" alt="">
+            
+        </div>
+    </div>
+    <div class="head d-flex flex-column align-items-center  ">
+        <div class="data  p-4 position-relative ">
+            <h3 class=" text-center">أختر نوع المنزل</h3>
+            <p >قم بأختيار مصدر شقك الأسكانية كل تستكمل باقي الخطوات</p>
+            <img src="../../../assets/Vector.png" alt="vector" class="position-absolute vectortop">
+            <img src="../../../assets/Vector.png" alt="vector" class="position-absolute vectorbottom">
+        </div>
+            <div class="row container p-4 ">
+                <div class="col-12 col-md-4  section p-4  d-flex justify-content-center ">
+                    <label class="section-content  d-flex flex-column justify-content-center align-items-center " [ngClass]="{'selected': selectedhouse =='فيلا'}">
+                        <div class="img ">
+                            <img src="../../../assets/فيلا.png" alt="" class="w-100">
+                        </div>
+                        <input type="radio"  [(ngModel)]="selectedhouse" name="place" id="option1" class="d-none" value="فيلا">
+    
+                        <p>فيلا</p>
+                        <img src="../../../assets/Primary.png" alt="primary" class="position-absolute primary" [ngClass]="{'d-none': selectedhouse  !== 'فيلا'}">
+                    </label>
+    
+                </div>
+                <div class="col-12 col-md-4  section p-4  d-flex justify-content-center ">
+                    <label class="section-content  d-flex flex-column justify-content-center align-items-center " [ngClass]="{'selected': selectedhouse == 'شقة دوبليكس'}">
+                        <div class="img ">
+                            <img src="../../../assets/دوبليكس.png" alt="الساحل" class="w-100">
+        
+                        </div>
+                        <input type="radio"  [(ngModel)]="selectedhouse"  name="place" id="option2" class="d-none" value="شقة دوبليكس">
+    
+                        <p>شقة دوبليكس</p>
+                        <img src="../../../assets/Primary.png" alt="primary" class="position-absolute primary d-none" [ngClass]="{'d-none': selectedhouse  !== 'شقة دوبليكس'}">
+    
+                    </label>
+    
+                </div>
+                <div class="col-12 col-md-4  section p-4  d-flex justify-content-center ">
+                    <label class="section-content  d-flex flex-column justify-content-center align-items-center " [ngClass]="{'selected': selectedhouse == 'شقة سكنية'}">
+                        <div class="img ">
+                            <img src="../../../assets/سكنيه.png" alt="" class="w-100">
+        
+                        </div>
+                        <input type="radio"  [(ngModel)]="selectedhouse"  name="place" id="option3" class="d-none" value="شقة سكنية">
+    
+                        <p>شقة سكنية</p>
+                        <img src="../../../assets/Primary.png" alt="primary" class="position-absolute primary d-none" [ngClass]="{'d-none': selectedhouse  !== 'شقة سكنية'}">
+    
+                    </label>
+    
+                </div>
+    
+            </div> 
+
+            <div class="button mt-5 mb-5 " (click)="selecthouse()">
+
+                <button class="btn btn-primary" [disabled]="selectedhouse==''" > <img src="../../../assets/circle-chevron-right (2).png" alt="">  التالي</button>
+            </div>
+            <div class="footer d-flex flex-column align-items-center justify-content-center">
+                <p>نحن هنا لمساعدتك في أختيار منزلك بسهولة وعناية</p>
+                <p>قم بالضغط على زر "بدء" للبدء في العملية، واتبع التوجيهات لإدخال معلومات الحملة</p>
+            </div>
+           
+
+
+    </div>
+    <div class="linesection2">
+
+    </div>
+    <div #backhover class="backhover d-none " (mouseleave)="removeBox()">
+        <div class="row">
+            <div class="col-6 ">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,157 @@
+<section *ngIf="firstSection">
+    <div class="navbar p-3">
+        <div class="back d-flex justify-content-center align-items-center " (click)="backsec1()"  (mouseenter)="disblayBox()" ><img class="ms-2 " src="../../../assets/arrow-right.png" alt="arrow"><p class="mb-0">العودة</p></div>
+        <div class="exit ms-3" (mouseenter)="redexit()" (mouseleave)="normalexit()" >
+            <img #normalExit class="normalexit " src="../../../assets/exit.png" alt="">
+            <img #redExit class="redexit d-none" src="../../../assets/redexit.png" alt="">
+            
+        </div>
+    </div>
+    <div class="container ps-4 pe-4 ">
+        <div class="data  position-relative ">
+            <h3 class="mt-4">قم بكتابة وصف منزل أحلامك</h3>
+            <img src="../../../assets/Vectoryellow.png" alt="vector" class="position-absolute vectortop">
+            <img src="../../../assets/Vectoryellow.png" alt="vector" class="position-absolute vectorbottom">
+        </div>
+    <form [formGroup]="writeDescription" (ngSubmit)="sendData()">
+    <div class="descraption mt-5">
+        <p>وصف مختصر عن المنزل</p>
+        <input type="text" class="form-control " placeholder="وصف مختصر عن المنزل" formControlName="briefDescription" name="briefDescription">
+       
+    </div>
+    <div class="housedesc">
+        <p >وصف تعبيري عن المنزل</p>
+    
+        <div class="textarea shadow">
+            <ul class="d-flex align-items-center">
+                <li><img src="../../../assets/Frame1.png" alt=""></li>
+                <li><img src="../../../assets/Frame2.png" alt=""></li>
+                <li><img src="../../../assets/Frame3.png" alt=""></li>
+                <li><img src="../../../assets/Frame4.png" alt=""></li>
+                <li><img src="../../../assets/Frame5.png" alt=""></li>
+                <li><img src="../../../assets/Frame6.png" alt=""></li>
+                <li><img src="../../../assets/Frame7.png" alt=""></li>
+                <li><img src="../../../assets/Frame8.png" alt=""></li>
+                <li><img src="../../../assets/Frame9.png" alt=""></li>
+                <li><img src="../../../assets/Frame10.png" alt=""></li>
+                <li><img src="../../../assets/frame11.png" alt=""></li>
+                <li><img src="../../../assets/frame12.png" alt=""></li>
+                <li><img src="../../../assets/frame13.png" alt=""></li>
+                <li class="d-flex"><img src="../../../assets/chevron-down.png" alt="">14</li>
+            </ul>
+            <textarea name="descraption" id="descraption" formControlName="expressiveDescription" name="expressiveDescription"></textarea>
+        </div>
+    </div>
+    
+    
+        <div class="button mt-5 mb-3 " >
+    
+            <button class="btn btn-primary"  [disabled]="writeDescription.invalid" > الخطوة التالية</button>
+        </div>
+    </form>
+        <p class="text-center note">قم بالضغط على زر "بدء" للبدء في العملية، لادخال معلومات المنزل</p>
+        
+    </div>
+    <div class="line">
+
+    </div>
+
+    <div #backhover class="backhover d-none " (mouseleave)="removeBox()">
+        <div class="row">
+            <div class="col-6 ">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class=" d-flex flex-column align-items-center">
+                    <img src="../../../assets/user.png" alt="">
+                    <p>القاهره</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section *ngIf="secondSection">
+    <div class="navbar p-3">
+        <div class="back d-flex justify-content-center align-items-center " (click)="backsec2()"  (mouseenter)="disblayBox()" ><img class="ms-2 " src="../../../assets/arrow-right.png" alt="arrow"><p class="mb-0">العودة</p></div>
+        <div class="exit ms-3" (mouseenter)="redexit()" (mouseleave)="normalexit()" >
+            <img #normalExit class="normalexit " src="../../../assets/exit.png" alt="">
+            <img #redExit class="redexit d-none" src="../../../assets/redexit.png" alt="">
+            
+        </div>
+    </div>
+  <div class="container section2 ps-4 pe-4 ">
+    <div class="data2">
+        <h3 class="mt-4">قم بكتابة نص الرسالة المرسلة</h3>
+        <p>قم بتسمية حملتك و تاريخ إرسال الحملة المتوقع</p>
+    </div>
+<form [formGroup]="houseDesign" (ngSubmit)="sendHouseDesign()">
+<div class=" mt-5 house">
+    <div class="d-flex align-items-center hoseDesign">
+        <img src="../../../assets/calendar-tick.png" alt="" class="ms-1">
+    <p class="m-0" >تصميم المنزل </p>
+
+    </div>
+    <div class="d-flex">
+        <div class="radio d-flex align-items-center ms-5">
+            <input type="radio" id="modern"  name="Design" formControlName="Design" class="ms-2" value="تصميم حديث">
+            <label for="modern" >تصميم حديث</label>
+        </div>  
+          <div class="radio d-flex align-items-center ">
+            <input type="radio" id="intelligent"  name="Design" formControlName="Design"  class="ms-2" value="تصميم حديث وذكي">
+            <label for="intelligent" >تصميم حديث وذكي</label>
+        </div>
+    </div>
+
+    <div class="viewHouse d-flex align-items-center mt-4">
+        <img src="../../../assets/eye.png" alt="" class="ms-1">
+        <p class="m-0">معاينة وصف المنزل</p>
+    </div>
+    <div class="subject mt-4">
+        <p class="m-0 "><span class="ms-2">الموضوع:</span>{{writeDescription.value.briefDescription}}</p>
+    </div>
+
+
+   
+</div>
+<div class="housedesc">
+
+    <div class="textarea shadow">
+        {{writeDescription.value.expressiveDescription}}
+    </div>
+</div>
+
+
+    <div class="button mt-5 mb-3 " >
+
+        <button class="btn btn-primary"  [disabled]="houseDesign.invalid" > الخطوة التالية</button>
+    </div>
+</form>
+    <p class="text-center note">قم بالضغط على زر "بدء" للبدء في العملية، لادخال معلومات المنزل</p>
+  </div>
+    
+  <div class="linesection2">
+
+  </div>
+
+  <div #backhover class="backhover d-none " (mouseleave)="removeBox()">
+    <div class="row">
+        <div class="col-6 ">
+            <div class=" d-flex flex-column align-items-center">
+                <img src="../../../assets/user.png" alt="">
+                <p>القاهره</p>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class=" d-flex flex-column align-items-center">
+                <img src="../../../assets/user.png" alt="">
+                <p>القاهره</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

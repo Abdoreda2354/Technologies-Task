@@ -1,0 +1,146 @@
+*{
+    font-family: 'Neo Sans Arabic', sans-serif;
+}
+.data h3{
+width: 305px;
+height: 15px;
+font-weight: 500;
+font-size: 20px;
+line-height: 21px;
+color: #000000;
+}
+
+.data p{
+margin-top: 20px;
+font-size: 14px;
+line-height: 21px;
+color: #A5A7AB;
+
+}
+.head p{
+color: #A5A7AB;
+}
+.head{
+    margin-top: 20px;
+}
+.head .vectortop{
+top: 7px;
+right: 38px;
+}
+.head .vectorbottom{
+bottom: 31px;
+left: 5px;
+}
+
+.section-content{
+    width: 170px;
+    height: 170px;
+    position: relative;
+}
+.section-content p{
+
+font-size: 14px;
+color: #2E2E2E;
+}
+.container{
+    max-width:750px!important;
+    margin-top: 70px;
+}
+.selected{
+    border: 2px solid #3E97FF;
+    border-radius: 10px;
+}
+.section-content .primary{
+    top: 12px;
+    right: 12px;
+
+}
+.button button{
+    color:#ffffff;
+    width: 220px;
+    background-color: #3E97FF;
+    box-shadow: 0px -2px 21.1px 0px #4FA0FF66;
+}
+.button button:hover{
+    background-color: #2871c4;
+
+}
+.button img{
+    margin-left: 7px;
+}
+.button{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+font-size: 12px;
+line-height: 10px;
+color: #9CA3AF;
+}
+.navbar p{
+line-height: 14px;
+color: #83899F;
+}
+.exit{
+    transform: scale(1.3);
+}
+
+.line{
+    background-color: #3E97FF;
+position: absolute;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+bottom: 0;
+width: 20%;
+height: 10px;
+transition: width 3s ease;
+
+}
+.linesection2{
+    background-color: #3E97FF;
+    position: absolute;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    bottom: 0;
+    width:20%;
+    height: 10px; 
+    animation: increaseWidth 0.5s forwards;
+    
+}
+.back{
+    cursor: pointer;
+}
+.backhover{
+    width: 380px;
+    padding: 30px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    border: 1px solid #0000002c;
+    border-radius: 20px;
+    transition: 0.5s;
+    z-index: 9999;
+    background-color: #a5a7ab79;
+}
+
+@keyframes increaseWidth {
+    from {
+      width: 20%; 
+    }
+    to {
+      width: 40%; 
+    }
+  }
+
+  @media (max-width: 767.20px) {
+    .line{
+    bottom: -380px;
+    
+    }
+    .linesection2{
+        bottom: -380px;
+        
+    }
+    }

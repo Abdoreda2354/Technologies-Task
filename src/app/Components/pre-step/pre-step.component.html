@@ -1,0 +1,91 @@
+<section class="" >
+    <div class="row">
+        <div class="col-12 col-md-6 section1 ">
+            <div class="internal">
+                <div class="head d-flex align-items-center">
+                    <img class="ms-2" src="../../../assets/fxemoji_megaphone.png" alt="">
+                        <p class="mb-0">تهيئة الحملات الإعلانية </p>
+                </div>
+             
+                 <h2 > مرحبًا بك في منصة أختيار عقارات سكنية للتعمير</h2>
+
+                 <p class="p2">قم بإضافة عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة""قم بإضافة عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة</p>
+
+                 <ul>
+                    <li>
+                        <div class="img">
+                            <img class="w-50" src="../../../assets/check.png" alt=""> 
+                        </div>
+                        
+                        <p>قم بتحميل شعارك وتفاصيل علامتك التجارية </p>
+                     </li>
+                    <li>
+                        <div class="img">
+                            <img class="w-50" src="../../../assets/check.png" alt=""> 
+                        </div>
+                        <p> اختر وخصص الحقول التي تحتاجها </p> 
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img class="w-50" src="../../../assets/check.png" alt=""> 
+                        </div> 
+                        <p> اختر موضوعاً وصمم مظهر استمارتك </p> 
+                    </li>
+                    <li>
+                        <div class="img">
+                            <img class="w-50" src="../../../assets/check.png" alt=""> 
+                        </div>
+                         <p> ضبط رسالة شكر وإجراءات المتابعة </p> 
+                        </li>
+                 </ul>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-6 ">
+            <div class="internal2">
+<div class="head">
+    <h3>طريقة بناء الحملة الخاصة بك</h3>
+    <p>الطريقة المختارة لطريقة إنشاء رسالة الحملة</p>
+</div>
+
+<form [formGroup]="selectCampaignBuilding" (ngSubmit)="start()">
+                   
+    <label class="box position-relative" [ngClass]="{'selected': selectedOption === ' إنشاء يدوي'}">
+        <img src="../../../assets/message.png" alt="message" class="message">
+        <h5>إنشاء يدوي</h5>
+        <p>قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،</p>
+    
+        <input type="radio" formControlName="methodOfCreate" [(ngModel)]="selectedOption" name="methodOfCreate" value=" إنشاء يدوي" class="d-none position-absolute option1" >
+    
+        <img src="../../../assets/Primary.png" alt="primary" 
+             class="primary position-absolute" 
+             [ngClass]="{'d-none': selectedOption !== ' إنشاء يدوي'}">
+    </label>
+   
+    <label class="box position-relative mt-4" [ngClass]="{'selected': selectedOption === 'إنشاء عبر الذكاء الأصطناعي'}">
+        <img src="../../../assets/Group 1000017646.png" alt="Ai" class="Ai">
+            <h5>إنشاء عبر الذكاء الأصطناعي</h5>
+
+            <p> قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،</p>
+            <input type="radio" formControlName="methodOfCreate" [(ngModel)]="selectedOption" name="methodOfCreate" value="إنشاء عبر الذكاء الأصطناعي" class="d-none position-absolute option2" >
+            <img src="../../../assets/Primary.png" alt="primary" class="primary position-absolute d-none"  [ngClass]="{'d-none': selectedOption !== 'إنشاء عبر الذكاء الأصطناعي'}">
+            
+    </label>
+
+    <div class="box2 mt-5 hidden" [ngClass]="{'hidden':selectedOption !==' إنشاء يدوي'}">
+        <h3>قم بتسمية مشروع أختيار</h3>
+        <p>أسم مشروعك يجب ان يكون مميز و واضح</p>
+ 
+            <input type="text" class="form-control " placeholder="أسم مشروع مقترح" formControlName="nameOfProject" >
+
+    </div>
+    <div class="button">
+        <button class="btn btn-primary" [disabled]="selectCampaignBuilding.invalid">أبدأ الأن</button>
+    </div>
+</form>
+</div>
+
+
+        </div>
+    </div>
+</section>
